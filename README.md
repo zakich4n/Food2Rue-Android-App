@@ -33,7 +33,7 @@ project and change the settings to match what you plan to build. In particular,
 you're at least going to want to change the following:
 
 - Application Name: Food 2 Rue
-- Company Domain: Blanqui-Gouizi Society and Co
+- Company Domain: Blanqui-Gouizi-Deschildre Society and Co
 
 ### Fastlane files
 
