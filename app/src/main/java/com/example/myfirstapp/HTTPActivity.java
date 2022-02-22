@@ -1,6 +1,5 @@
 package com.example.myfirstapp;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -12,15 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.ContentHandler;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -28,9 +20,7 @@ import okhttp3.Request;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-import javax.net.ssl.HttpsURLConnection;
-
-public class MainActivity extends AppCompatActivity {
+public class HTTPActivity extends AppCompatActivity {
     //public static String data_received = "";
     public static String URL = "https://world.openfoodfacts.org/api/v2/product/04963406";
     public String data = "";
@@ -38,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.http_activity);
         Button button_connection = (Button) findViewById(R.id.button_connected);
 
         button_connection.setOnClickListener(new View.OnClickListener() {
