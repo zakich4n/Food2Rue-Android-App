@@ -28,8 +28,8 @@ public class HTTPActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.http_activity);
-        Button button_connection = (Button) findViewById(R.id.button_connected);
+        setContentView(R.layout.activity_main);
+        Button button_connection = null;
 
         button_connection.setOnClickListener(new View.OnClickListener() {
             @Override
