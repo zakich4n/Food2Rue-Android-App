@@ -1,3 +1,4 @@
+-paul_est_passe_par_la-
 # Introduction
 
 This is a template for doing Android development using GitLab and [fastlane](https://fastlane.tools/).
@@ -32,7 +33,7 @@ project and change the settings to match what you plan to build. In particular,
 you're at least going to want to change the following:
 
 - Application Name: Food 2 Rue
-- Company Domain: Blanqui Society and Co
+- Company Domain: Blanqui-Gouizi-Deschildre Society and Co
 
 ### Fastlane files
 
@@ -84,3 +85,5 @@ scheme you may want to change this.
     - "export VERSION_CODE=$(($CI_PIPELINE_IID)) && echo $VERSION_CODE"
     - "export VERSION_SHA=`echo ${CI_COMMIT_SHA:0:8}` && echo $VERSION_SHA"
 ```
+
+
