@@ -40,11 +40,24 @@ public class MainActivity extends AppCompatActivity {
                 go_to_barcode();
             }
         });
+
+        Button btn_go_to_game = (Button) findViewById(R.id.btn_play);
+        btn_go_to_game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                go_to_game();
+            }
+        });
     }
 
     public void go_to_barcode(){
         Intent intent_to_barcode = new Intent(this, BarcodeActivity.class);
         startActivity(intent_to_barcode);
+    }
+
+    public void go_to_game(){
+        Intent intent_to_game = new Intent(this, GameActivity.class);
+        startActivity(intent_to_game);
     }
 }
 
