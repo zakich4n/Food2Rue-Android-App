@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
 
-                android:text="Custom Dialog Title"
+                android:text="HTTP Resp"
 
                 android:textSize="20sp" />
 

@@ -1,1 +1,5 @@
 /build
+/.gradle
+*.lock
+*.bin
+local.properties

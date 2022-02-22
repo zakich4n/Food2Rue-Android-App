@@ -1,5 +1,7 @@
 package com.example.myfirstapp;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.ContentHandler;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -62,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
                                 if (!TextUtils.isEmpty(result)) {
                                     //JSONObject obj = new JSONObject(result);
                                     //String jsonAsString = obj.toString();
-                                    TextView textview1 = (TextView) findViewById(R.id.txtDesc);
-                                    textview1.setText(result);
-                                    setContentView(textview1);
+                                    setText(result);
                                 }
                             } catch (Exception e) {
                                 Log.e(TAG, "Exception = " + e);
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+                showDialog();
             }
         });
     }
@@ -101,4 +103,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void showDialog() {
+        Dialog dialog= new Dialog(this);
+        dialog.setContentView(R.layout.layout_custom_dialog);
+        dialog.show();
+    }
+
+    private void setText(final String value){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                setContentView(R.layout.layout_custom_dialog);
+                TextView my_data = (TextView) findViewById(R.id.txtDesc);
+                my_data.setText(value);
+            }
+        });
+    }
 }
