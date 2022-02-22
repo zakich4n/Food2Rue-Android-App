@@ -1,4 +1,5 @@
 -paul_est_passe_par_la-
+silence paul
 # Introduction
 
 This is a template for doing Android development using GitLab and [fastlane](https://fastlane.tools/).
