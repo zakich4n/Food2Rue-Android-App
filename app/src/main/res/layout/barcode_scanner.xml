@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/chocolate"
+        android:fontFamily="@font/chocolate_font"
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Scan your food !"

@@ -4,7 +4,7 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/chocolate"
+        android:font="@font/chocolate_font"
         tools:ignore="ResourceCycle" />
 
 </font-family>
