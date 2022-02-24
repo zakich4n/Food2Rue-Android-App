@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -23,21 +24,28 @@ import okhttp3.Response;
 
 public class GameActivity extends AppCompatActivity {
 
+    final LoadingDialog loadingDialog=new LoadingDialog(GameActivity.this);
+
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.game);
+        final LoadingDialog loadingDialog=new LoadingDialog(GameActivity.this);
+
+        loadingDialog.startLoading();
+
+        Handler handler= new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadingDialog.stopLoading();
+            }
+        }, 5000);
     }
     @Override
-    protected void onPause() {
-        super.onPause();
-        try {
-            TimeUnit.SECONDS.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        findViewById(R.id.loading_anim).setVisibility(View.GONE);
+    protected void onStart() {
+        super.onStart();
+
     }
 
     @Override
@@ -45,6 +53,8 @@ public class GameActivity extends AppCompatActivity {
         super.onResume();
 
     }
+
+
 
 
     private void setText(final String data, final int layout, final int textView) {
