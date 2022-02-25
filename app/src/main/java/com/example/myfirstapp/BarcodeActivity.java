@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
@@ -27,8 +28,8 @@ public class BarcodeActivity extends AppCompatActivity {
     private CameraSource cameraSource;
     private static final int REQUEST_CAMERA_PERMISSION = 201;
     private ToneGenerator toneGen1;
-    private TextView barcodeText;
-    private String barcodeData;
+    public TextView barcodeText;
+    public String barcodeData;
 
 
 
@@ -107,11 +108,13 @@ public class BarcodeActivity extends AppCompatActivity {
                                 barcodeData = barcodes.valueAt(0).email.address;
                                 barcodeText.setText(barcodeData);
                                 toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
+                                go_to_product_info();
                             } else {
 
                                 barcodeData = barcodes.valueAt(0).displayValue;
                                 barcodeText.setText(barcodeData);
                                 toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
+                                go_to_product_info();
 
                             }
                         }
@@ -136,5 +139,12 @@ public class BarcodeActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         initialiseDetectorsAndSources();
     }
+    public void go_to_product_info(){
+        Intent intent_to_product_info = new Intent(this, ProductInfoActivity.class);
+        startActivity(intent_to_product_info);
+    }
 
+    public String getBarcodeData(){
+        return this.barcodeData;
+    }
 }
