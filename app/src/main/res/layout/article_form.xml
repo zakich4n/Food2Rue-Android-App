@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/onichan"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Article Title"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/product_brands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Article Brand"
+                    app:layout_constraintStart_toEndOf="@+id/product_title"
+                    tools:ignore="MissingConstraints,NotSibling" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Qty : " />
+
+                <TextView
+                    android:id="@+id/product_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catégorie : "
+                    tools:ignore="MissingConstraints" />
+
+
+                <TextView
+                    android:id="@+id/product_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Légumes"
+                    tools:ignore="MissingConstraints" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat, ipsum sed imperdiet condimentum, augue turpis mattis est, non malesuada augue justo et libero. Aenean laoreet pharetra ante id tincidunt. Fusce consectetur nulla orci, eu scelerisque leo tincidunt in. Nullam eget ligula in nulla blandit iaculis."
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Packaging : "
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/product_packagings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plastique"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Labels : "
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/product_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sans gluten"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traces : "
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/product_traces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oeuf"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allergens : "
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/product_allergens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pollen"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/product_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat, ipsum sed imperdiet condimentum, augue turpis mattis est, non malesuada augue justo et libero. Aenean laoreet pharetra ante id tincidunt. Fusce consectetur nulla orci, eu scelerisque leo tincidunt in. Nullam eget ligula in nulla blandit iaculis."
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/product_nutriments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Nutrition facts" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:text="As sold for 100 g / 100 ml" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:text="As sold per serving" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Energy" />
+
+            <TextView
+                android:id="@+id/energy_as_sold_for_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/energy_as_sold_per_serving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Fat" />
+
+            <TextView
+                android:id="@+id/fat_as_sold_for_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/fat_as_sold_per_serving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Saturated Fat" />
+
+            <TextView
+                android:id="@+id/saturated_fat_as_sold_for_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/saturated_fat_as_sold_per_serving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Trans Fat" />
+
+            <TextView
+                android:id="@+id/trans_fat_as_sold_for_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/trans_fat_as_sold_per_serving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Cholesterol" />
+
+            <TextView
+                android:id="@+id/cholesterol_as_sold_for_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/cholesterol_as_sold_per_serving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:text="Carbohydrates" />
+
+            <TextView
+                android:id="@+id/carbohydrates_as_sold_for_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/carbohydrates_as_sold_per_serving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
