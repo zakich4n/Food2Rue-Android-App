@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         >
+
 
         <!--<provider
            &lt;!&ndash;android:name="androidx.core.content.FileProvider"
