@@ -24,12 +24,12 @@ public class HTTPActivity extends AppCompatActivity {
     //public static String data_received = "";
     public static String URL = "https://world.openfoodfacts.org/api/v2/product/04963406";
     public String data = "";
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button_connection = null;
+        Button button_connection = (Button) findViewById(R.id.button_connected);
 
         button_connection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,4 +110,6 @@ public class HTTPActivity extends AppCompatActivity {
             }
         });
     }
+
+ */
 }

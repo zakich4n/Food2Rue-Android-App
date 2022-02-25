@@ -57,6 +57,7 @@ public class BarcodeActivity extends AppCompatActivity {
 
         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
+
             public void surfaceCreated(SurfaceHolder holder) {
                 try {
                     if (ActivityCompat.checkSelfPermission(BarcodeActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {

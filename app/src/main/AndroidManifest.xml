@@ -32,7 +32,7 @@
             android:value="barcode" />
         <activity android:name=".BarcodeActivity"/>
         <activity android:name=".GameActivity"/>
-
+        <activity android:name=".ScoreBoardActivity"/>
         <activity android:name=".HTTPActivity"/>
         <activity android:name=".MainActivity"
             android:exported="true">
