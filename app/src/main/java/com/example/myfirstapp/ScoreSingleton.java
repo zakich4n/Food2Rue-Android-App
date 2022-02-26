@@ -28,7 +28,7 @@ public class ScoreSingleton {
         for (int i =1; i<11 ; i++){
             Score scoretmp = new Score();
             scoretmp.note = 12;
-            scoretmp.date = "aujourd'hui";
+            scoretmp.date = "22/02/2222";
             scoretmp.position = i;
             score_list.add(scoretmp);
         }
