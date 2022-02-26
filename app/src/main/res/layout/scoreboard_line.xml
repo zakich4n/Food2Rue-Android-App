@@ -38,12 +38,12 @@
 
 
             <TextView
+                android:id="@+id/textview_score_note"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textview_score_note"
+                android:fontFamily="@font/chocolate"
                 android:text="13"
                 android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="@font/chocolate"
                 android:textSize="40dp"
                 tools:layout_editor_absoluteX="56dp"
                 tools:layout_editor_absoluteY="0dp"></TextView>

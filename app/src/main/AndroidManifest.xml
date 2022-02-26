@@ -32,6 +32,10 @@
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <activity android:name=".BarcodeActivity"/>
         <activity android:name=".GameActivity"/>
         <activity android:name=".ScoreBoardActivity"/>
