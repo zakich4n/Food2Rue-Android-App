@@ -7,9 +7,9 @@
 
     //specify gradient
     <gradient
-        android:startColor="@color/color_logo"
-        android:endColor="@color/colorPrimary"
-        android:angle="90"/>
+        android:startColor="#51815B"
+        android:endColor="#052C11"
+        android:angle="0"/>
 
     <padding
         android:left="5dp"
@@ -17,8 +17,8 @@
         android:right="5dp"
         android:bottom="5dp"/>
     <corners
-        android:bottomRightRadius="30dp"
-        android:bottomLeftRadius="30dp"
-        android:topLeftRadius="30dp"
-        android:topRightRadius="30dp"/>
+        android:bottomRightRadius="15dp"
+        android:bottomLeftRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"/>
 </shape>

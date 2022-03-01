@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_main);
+
 
         Button btn_go_to_barcode = (Button) findViewById(R.id.btn_to_barcode);
         btn_go_to_barcode.setOnClickListener(new View.OnClickListener() {
