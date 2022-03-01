@@ -25,6 +25,11 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
+import okhttp3.Call;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -72,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent_to_scoreboard = new Intent (this, ScoreBoardActivity.class);
         startActivity(intent_to_scoreboard);
     }
+
+
+
 }
 
 

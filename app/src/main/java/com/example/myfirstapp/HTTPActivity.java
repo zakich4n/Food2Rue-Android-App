@@ -1,30 +1,68 @@
 package com.example.myfirstapp;
 
-import android.app.Dialog;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 
 import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Callback;
 import okhttp3.Response;
 
-public class HTTPActivity extends AppCompatActivity {
-    //public static String data_received = "";
-    public static String URL = "https://world.openfoodfacts.org/api/v2/product/04963406";
-    public String data = "";
+public class HTTPActivity implements Runnable {
+    public void HTTPRequestGET_Asynchr(String URL) {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .get()
+                .url(URL)
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            private final String TAG = null;
+
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    try {
+                        final String result = response.body().string();
+                        if (!TextUtils.isEmpty(result)) {
+                            GameActivity.data = result;
+                        }
+                    } catch (Exception e) {
+                        Log.e(TAG, "Exception = " + e);
+                    }
+                }
+
+            }
+        });
+    }
+
+    @Override
+    public void run() {
+        
+    }
+
 /*
+
+
+
+
+
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
