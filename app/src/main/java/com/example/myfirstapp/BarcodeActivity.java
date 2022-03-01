@@ -7,8 +7,8 @@ import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.os.Bundle;
 
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -24,7 +24,7 @@ import java.io.IOException;
 public class BarcodeActivity extends AppCompatActivity {
 
     private SurfaceView surfaceView;
-    private BarcodeDetector barcodeDetector;
+    public BarcodeDetector barcodeDetector;
     private CameraSource cameraSource;
     private static final int REQUEST_CAMERA_PERMISSION = 201;
     private ToneGenerator toneGen1;
@@ -141,10 +141,7 @@ public class BarcodeActivity extends AppCompatActivity {
     }
     public void go_to_product_info(){
         Intent intent_to_product_info = new Intent(this, ProductInfoActivity.class);
+        intent_to_product_info.putExtra("barcode",barcodeData);
         startActivity(intent_to_product_info);
-    }
-
-    public String getBarcodeData(){
-        return this.barcodeData;
     }
 }
