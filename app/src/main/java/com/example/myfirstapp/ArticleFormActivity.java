@@ -12,7 +12,7 @@ public class ArticleFormActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        setContentView(R.layout.article_form);
+        setContentView(R.layout.article_form2);
     }
 
 }
