@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,15 +25,18 @@ import okhttp3.Response;
 public class ProductInfoActivity extends AppCompatActivity {
     public BarcodeActivity barcode;
     public String barcodeData;
-    public String obj;
+    public JsonAdapter jsonAdapter;
+    public TextView product_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.paul);
+        product_name = findViewById(R.id.product_name);
         barcodeData = barcode.getBarcodeData();
 
-        final String URL = "https://world.openfoodfacts.org/api/v2/product/"+barcodeData;
+
+        final String URL = "https://world.openfoodfacts.org/api/v2/product/"+barcodeData+".json";
 
         OkHttpClient client = new OkHttpClient();
         Request request=new Request.Builder()
@@ -53,7 +57,8 @@ public class ProductInfoActivity extends AppCompatActivity {
                     try {
                         final String result = response.body().string();
                         if (!TextUtils.isEmpty(result)) {
-                            obj = result;
+                            Product prod = jsonAdapter.newProduct(result);
+                            SetInfo(prod);
                         }
                     } catch (Exception e) {
                         Log.e(TAG, "Exception = " + e);
@@ -61,8 +66,9 @@ public class ProductInfoActivity extends AppCompatActivity {
                 }
             }
         });
-        Gson gson = new GsonBuilder().create();
-        Product product = gson.fromJson( obj, Product.class);
-        System.out.print(product);
+    }
+
+    public void SetInfo (Product product){
+        product_name.setText(product.getGeneric_name());
     }
 }
