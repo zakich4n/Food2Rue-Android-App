@@ -1,6 +1,6 @@
 package com.example.myfirstapp;
 
-import android.webkit.JavascriptInterface;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Product {
     protected String generic_name;                  //the short generic name of the product
