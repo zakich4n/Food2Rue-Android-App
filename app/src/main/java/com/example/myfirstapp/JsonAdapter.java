@@ -6,13 +6,22 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class JsonAdapter {
+
+    private static final JsonAdapter instance = new JsonAdapter();
+
+    public static final JsonAdapter getInstance()
+    {
+        return instance;
+    }
 
     public Product importJson(JSONObject json) throws JSONException {
         Product current_product = new Product(
                 json.getString("product_name"));
 
+        current_product.setGeneric_name(json.getString("generic_name"));
         current_product.setCategories(json.getString("categories"));
         current_product.setTrace(json.getString("traces"));
         current_product.setBarcode(json.getString("code"));

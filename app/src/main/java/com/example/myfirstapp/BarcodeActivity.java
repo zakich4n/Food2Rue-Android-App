@@ -30,6 +30,7 @@ public class BarcodeActivity extends AppCompatActivity {
     private ToneGenerator toneGen1;
     public TextView barcodeText;
     public String barcodeData;
+    private Boolean detected = false;
 
 
 
@@ -97,26 +98,19 @@ public class BarcodeActivity extends AppCompatActivity {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
 
-
                     barcodeText.post(new Runnable() {
 
                         @Override
                         public void run() {
-
-                            if (barcodes.valueAt(0).email != null) {
-                                barcodeText.removeCallbacks(null);
-                                barcodeData = barcodes.valueAt(0).email.address;
-                                barcodeText.setText(barcodeData);
-                                toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
-                                go_to_product_info();
-                            } else {
-
+                            if(!detected){
+                                detected = true;
                                 barcodeData = barcodes.valueAt(0).displayValue;
                                 barcodeText.setText(barcodeData);
                                 toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
-                                go_to_product_info();
 
+                                go_to_product_info();
                             }
+
                         }
                     });
 
@@ -138,6 +132,7 @@ public class BarcodeActivity extends AppCompatActivity {
         super.onResume();
         getSupportActionBar().hide();
         initialiseDetectorsAndSources();
+        detected = false;
     }
     public void go_to_product_info(){
         Intent intent_to_product_info = new Intent(this, ProductInfoActivity.class);
