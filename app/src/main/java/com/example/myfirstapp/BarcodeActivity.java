@@ -1,13 +1,14 @@
 package com.example.myfirstapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.os.Bundle;
 
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -23,12 +24,13 @@ import java.io.IOException;
 public class BarcodeActivity extends AppCompatActivity {
 
     private SurfaceView surfaceView;
-    private BarcodeDetector barcodeDetector;
+    public BarcodeDetector barcodeDetector;
     private CameraSource cameraSource;
     private static final int REQUEST_CAMERA_PERMISSION = 201;
     private ToneGenerator toneGen1;
-    private TextView barcodeText;
-    private String barcodeData;
+    public TextView barcodeText;
+    public String barcodeData;
+    private Boolean detected = false;
 
 
 
@@ -96,24 +98,19 @@ public class BarcodeActivity extends AppCompatActivity {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
 
-
                     barcodeText.post(new Runnable() {
 
                         @Override
                         public void run() {
-
-                            if (barcodes.valueAt(0).email != null) {
-                                barcodeText.removeCallbacks(null);
-                                barcodeData = barcodes.valueAt(0).email.address;
-                                barcodeText.setText(barcodeData);
-                                toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
-                            } else {
-
+                            if(!detected){
+                                detected = true;
                                 barcodeData = barcodes.valueAt(0).displayValue;
                                 barcodeText.setText(barcodeData);
                                 toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
 
+                                go_to_product_info();
                             }
+
                         }
                     });
 
@@ -135,6 +132,11 @@ public class BarcodeActivity extends AppCompatActivity {
         super.onResume();
         getSupportActionBar().hide();
         initialiseDetectorsAndSources();
+        detected = false;
     }
-
+    public void go_to_product_info(){
+        Intent intent_to_product_info = new Intent(this, ProductInfoActivity.class);
+        intent_to_product_info.putExtra("barcode",barcodeData);
+        startActivity(intent_to_product_info);
+    }
 }
