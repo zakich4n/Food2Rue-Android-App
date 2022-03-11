@@ -56,7 +56,7 @@ public class ProductInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.paul);
+        setContentView(R.layout.article_form2);
 
         barcodeData = getIntent().getExtras().getString("barcode");
         product_brand = findViewById(R.id.product_brands);
@@ -112,14 +112,14 @@ public class ProductInfoActivity extends AppCompatActivity {
                 product_energy_as_sold_per_serving.setText((product.nutriments.getEnergy_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getEnergy_serving()));
                 product_fat_as_sold_for_100.setText((product.nutriments.getFat_100g()==null) ? "unknown" : String.valueOf(product.nutriments.getFat_100g()));
                 product_fat_as_as_sold_per_serving.setText((product.nutriments.getFat_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getFat_serving()));
-                product_saturated_fat_as_sold_for_100.setText((product.nutriments.getSaturatedFat100g()==null) ? "unknown" : String.valueOf(product.nutriments.getSaturatedFat100g()));
+                product_saturated_fat_as_sold_for_100.setText((product.nutriments.getSaturatedFat100g() != null) ? String.valueOf(product.nutriments.getSaturatedFat100g()) : "unknown");
                 product_saturated_fat_as_sold_per_serving.setText((product.nutriments.getSaturatedFatServing()==null) ? "unknown" : String.valueOf(product.nutriments.getSaturatedFatServing()));
-                product_protein_as_sold_for_100.setText((product.nutriments.getProteins_100g()==null) ? "unknown" : String.valueOf(product.nutriments.getProteins_100g()));
-                product_protein_as_sold_per_serving.setText((product.nutriments.getProteins_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getProteins_serving()));
-                product_salt_as_sold_for_100.setText((product.nutriments.getSalt_100g()==null) ? "unknown" : String.valueOf(product.nutriments.getSalt_100g()));
-                product_salt_as_sold_per_serving.setText((product.nutriments.getSalt_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getSalt_serving()));
-                product_carbohydrates_as_sold_for_100.setText((product.nutriments.getCarbohydrates_100g()==null) ? "unknown" : String.valueOf(product.nutriments.getCarbohydrates_100g()));
-                product_carbohydrates_as_sold_per_serving.setText((product.nutriments.getCarbohydrates_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getCarbohydrates_serving()));
+                product_protein_as_sold_for_100.setText((product.nutriments.getProteins_100g() == null) ? "unknown" : (String.valueOf(product.nutriments.getProteins_100g()) + ""));
+                product_protein_as_sold_per_serving.setText((product.nutriments.getProteins_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getProteins_serving())+"");
+                product_salt_as_sold_for_100.setText((product.nutriments.getSalt_100g()==null) ? "unknown" : String.valueOf(product.nutriments.getSalt_100g())+"");
+                product_salt_as_sold_per_serving.setText((product.nutriments.getSalt_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getSalt_serving())+"");
+                product_carbohydrates_as_sold_for_100.setText((product.nutriments.getCarbohydrates_100g()==null) ? "unknown" : String.valueOf(product.nutriments.getCarbohydrates_100g())+"");
+                product_carbohydrates_as_sold_per_serving.setText((product.nutriments.getCarbohydrates_serving()==null) ? "unknown" : String.valueOf(product.nutriments.getCarbohydrates_serving())+"");
                 Picasso.get().load(product.getImage_url()).fit().into(product_image);
 
                 //( ==null) ? "unknown" : String.valueOf(product.nutriments.getEnergyKcal100g())
