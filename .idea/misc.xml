@@ -3,18 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/drawable-v24/article_form_logo.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/drawable-v24/article_from_font.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/drawable-v24/back.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/drawable-v24/border.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/drawable-v24/gradient.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/drawable-v24/score_line.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/font/bungee.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/layout/article_form.xml" value="0.1" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/layout/article_form2.xml" value="0.14375" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/layout/barcode_scanner.xml" value="0.12760416666666666" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/layout/game.xml" value="0.184375" />
-        <entry key="..\:/Users/Maxime/AndroidStudioProjects/food2rue/app/src/main/res/layout/paul.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/food_barcode.xml" value="0.1195" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/ic_upc_scan.xml" value="0.1" />
@@ -27,9 +15,11 @@
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/scoreboard.xml" value="0.1265625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout/barcode_scanner.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/game.xml" value="0.6077315430548914" />
+        <entry key="app/src/main/res/layout/game.xml" value="0.29245283018867924" />
         <entry key="app/src/main/res/layout/layout_custom_dialog.xml" value="0.22644927536231885" />
         <entry key="app/src/main/res/layout/loading_dialog.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/loading_screen.xml" value="0.21145833333333333" />
+        <entry key="app/src/main/res/layout/paul.xml" value="0.21145833333333333" />
         <entry key="app/src/main/res/layout/scoreboard.xml" value="0.23020833333333332" />
       </map>
     </option>
