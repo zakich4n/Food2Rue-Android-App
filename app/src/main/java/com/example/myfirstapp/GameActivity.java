@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -37,9 +38,19 @@ public class GameActivity extends AppCompatActivity {
     String[] BarCodeList = barcodesRaw.split("#");
     private String[] Questions= {"Which is the most calorific ?","Which has the higher fat value ?","Which has the higher protein value ?","Which is the saltiest ?"};
     final LoadingDialog loadingDialog = new LoadingDialog(GameActivity.this);
+
+
+
     Product chosenProduct1;
     Product chosenProduct2;
+    TextView question;
+    ImageButton top;
+    ImageButton bot;
+
     static int tick=1;
+
+    static boolean answer=true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +59,7 @@ public class GameActivity extends AppCompatActivity {
 
 
         Handler handler = new Handler();
-        final LoadingDialog loadingDialog = new LoadingDialog(GameActivity.this);
+
         loadingDialog.startLoading();
 
         int rand =(int)Math.floor(Math.random() * BarCodeList.length);
@@ -77,7 +88,6 @@ public class GameActivity extends AppCompatActivity {
 
         while(true) {
             if(!data.equals(oldData) && !data.equals("")){
-
                 break;
             }
         }
@@ -94,8 +104,13 @@ public class GameActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        TextView question= (TextView) findViewById(R.id.question) ;
+        question= (TextView) findViewById(R.id.question) ;
         question.setText(Questions[rand]);
+
+
+        top=(ImageButton) findViewById(R.id.top_food);
+        bot=(ImageButton) findViewById(R.id.bot_food);
+
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -103,24 +118,70 @@ public class GameActivity extends AppCompatActivity {
                 loadingDialog.stopLoading();
                 //Picasso.get().load(chosenProduct1.getImage_url()).fit().into((ImageView) findViewById(R.id.top_food));
                 Glide.with(GameActivity.this) //view ou context
-                        .load(chosenProduct1.getImage_url()).centerCrop()
-                        .into((ImageView) findViewById(R.id.top_food)); //id de la Target
+                        .load(chosenProduct1.getImage_url()).fitCenter()
+                        .into(top); //id de la Target
+                switch (question.getText().toString()) {
+                    case "Which is the most calorific ?":
+                        answer= chosenProduct1.nutriments.energyKcal > chosenProduct2.nutriments.energyKcal;
+                    case "Which has the higher fat value ?":
+                        answer= chosenProduct1.nutriments.fat > chosenProduct2.nutriments.fat;
+                    case "Which has the higher protein value ?":
+                        answer= chosenProduct1.nutriments.proteins > chosenProduct2.nutriments.proteins;
+                    case "Which is the saltiest ?":
+                        answer= chosenProduct1.nutriments.salt > chosenProduct2.nutriments.salt;
+                }
 
+                top.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(answer) {
+                            top.setBackgroundColor(Color.argb(255,0,255,0));
+                            question.setTextColor(Color.argb(255,0,255,0));
+                        }
+                        else {
+                            top.setBackgroundColor(Color.argb(255,255,0,0));
+                            question.setTextColor(Color.argb(255,255,0,0));
+                            bot.setBackgroundColor(Color.argb(255,0,255,0));
+                        }
+                    }
+                });
+
+                bot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(!answer) {
+                            bot.setBackgroundColor(Color.argb(255,0,255,0));
+                            question.setTextColor(Color.argb(255,0,255,0));
+                        }
+                        else {
+                            bot.setBackgroundColor(Color.argb(255,255,0,0));
+                            question.setTextColor(Color.argb(255,255,0,0));
+                            top.setBackgroundColor(Color.argb(255,0,255,0));
+                        }
+                    }
+                });
             }
         }, 6000);
+
+
+
     }
 
 
     @Override
     protected void onStart() {
         super.onStart();
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
 
@@ -186,12 +247,12 @@ public class GameActivity extends AppCompatActivity {
                             if (tick%2==0) {
                                 //Picasso.get().load(chosenProduct1.getImage_url()).fit().into((ImageView) findViewById(R.id.top_food));
                                 Glide.with(GameActivity.this) //view ou context
-                                        .load(chosenProduct1.getImage_url()).centerCrop()
-                                        .into((ImageView) findViewById(R.id.top_food));
+                                        .load(chosenProduct1.getImage_url()).fitCenter()
+                                        .into((ImageButton) findViewById(R.id.top_food));
                             }
                             else if(tick%2!=0) {
                                 //Picasso.get().load(chosenProduct2.getImage_url()).fit().into((ImageView) findViewById(R.id.bot_food));
-                                Glide.with(GameActivity.this).load(chosenProduct2.getImage_url()).centerCrop().into((ImageView) findViewById(R.id.bot_food));
+                                Glide.with(GameActivity.this).load(chosenProduct2.getImage_url()).fitCenter().into((ImageButton) findViewById(R.id.bot_food));
                             }
 
                         }

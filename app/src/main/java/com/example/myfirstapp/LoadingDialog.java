@@ -21,9 +21,12 @@ class LoadingDialog {
          builder.setCancelable(false);
          dialog = builder.create();
          dialog.show();
+
      }
 
      void stopLoading() {
          dialog.dismiss();
      }
+
+
 }
