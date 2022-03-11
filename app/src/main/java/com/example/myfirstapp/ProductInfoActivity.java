@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -78,6 +80,7 @@ public class ProductInfoActivity extends AppCompatActivity {
                 product_traces.setText(product.getTrace());
                 product_allergens.setText(product.getAllergens());
                 ingredients.setText(product.getIngredients_text());
+                Picasso.get().load(product.getImage_url()).fit().into(product_image);
             }
         });
 
