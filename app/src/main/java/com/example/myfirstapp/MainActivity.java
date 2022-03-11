@@ -7,12 +7,9 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
-
-import okhttp3.Call;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_main);
+
 
         Button btn_go_to_barcode = (Button) findViewById(R.id.btn_to_barcode);
         btn_go_to_barcode.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 go_to_scoreboard();
             }
         });
+
+        Button btn_go_to_article_form = (Button) findViewById(R.id.btn_to_article_form);
+        btn_go_to_article_form.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                go_to_article_form();
+            }
+        });
     }
 
     public void go_to_barcode(){
@@ -62,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent_to_scoreboard);
     }
 
-
-
+    public void go_to_article_form(){
+        Intent intent_to_article_form = new Intent (this, ArticleFormActivity.class);
+        startActivity(intent_to_article_form);
+    }
 }
 
 
