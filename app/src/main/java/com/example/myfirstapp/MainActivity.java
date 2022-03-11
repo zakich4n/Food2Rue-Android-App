@@ -1,29 +1,15 @@
 package com.example.myfirstapp;
 
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.media.AudioManager;
-import android.media.ToneGenerator;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.util.SparseArray;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
-
-import com.example.myfirstapp.R;
-import com.google.android.gms.vision.CameraSource;
-import com.google.android.gms.vision.Detector;
-import com.google.android.gms.vision.barcode.Barcode;
-import com.google.android.gms.vision.barcode.BarcodeDetector;
-
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_main);
+
 
         Button btn_go_to_barcode = (Button) findViewById(R.id.btn_to_barcode);
         btn_go_to_barcode.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 go_to_scoreboard();
             }
         });
+
+        Button btn_go_to_article_form = (Button) findViewById(R.id.btn_to_article_form);
+        btn_go_to_article_form.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                go_to_article_form();
+            }
+        });
     }
 
     public void go_to_barcode(){
@@ -71,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
     public void go_to_scoreboard(){
         Intent intent_to_scoreboard = new Intent (this, ScoreBoardActivity.class);
         startActivity(intent_to_scoreboard);
+    }
+
+    public void go_to_article_form(){
+        Intent intent_to_article_form = new Intent (this, ArticleFormActivity.class);
+        startActivity(intent_to_article_form);
     }
 }
 

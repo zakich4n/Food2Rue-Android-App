@@ -8,5 +8,6 @@
     <color name="Transparent">#00000000</color>
     <color name="color_chocolate">#8B4513</color>
     <color name="color_logo">#DFF2D6</color>
+    <color name="color_font">#347255</color>
 
 </resources>
