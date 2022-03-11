@@ -46,13 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btn_go_to_article_form = (Button) findViewById(R.id.btn_to_article_form);
-        btn_go_to_article_form.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                go_to_article_form();
-            }
-        });
+
     }
 
     public void go_to_barcode(){
@@ -70,10 +64,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent_to_scoreboard);
     }
 
-    public void go_to_article_form(){
-        Intent intent_to_article_form = new Intent (this, ArticleFormActivity.class);
-        startActivity(intent_to_article_form);
-    }
+
 }
 
 

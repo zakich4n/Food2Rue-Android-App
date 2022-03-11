@@ -70,16 +70,5 @@
         app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"></Button>
 
-    <Button
-        android:id="@+id/btn_to_article_form"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/round_button"
-        android:backgroundTint="@color/color_font"
-        android:drawableTop="@drawable/article_form_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"></Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
