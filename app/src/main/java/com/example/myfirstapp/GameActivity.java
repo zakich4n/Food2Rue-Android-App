@@ -1,13 +1,18 @@
 package com.example.myfirstapp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -34,45 +39,75 @@ public class GameActivity extends AppCompatActivity {
     final LoadingDialog loadingDialog = new LoadingDialog(GameActivity.this);
     Product chosenProduct1;
     Product chosenProduct2;
-
+    static int tick=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
-        Handler handler = new Handler();
 
+
+        Handler handler = new Handler();
         final LoadingDialog loadingDialog = new LoadingDialog(GameActivity.this);
         loadingDialog.startLoading();
 
-        int rand = (int) Math.floor(Math.random() * BarCodeList.length);
+        int rand =(int)Math.floor(Math.random() * BarCodeList.length);
+
+        Thread thread = new Thread(){
+            public void run(){
+                try {
+                    newProduct(BarCodeList[(int) Math.floor(Math.random() * BarCodeList.length)]);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        thread.start();
         try {
-            chosenProduct1=newProduct(BarCodeList[rand]);
-        } catch (JSONException | IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-        rand = (int) Math.floor(Math.random() * BarCodeList.length);
-        try {
-            chosenProduct2=newProduct(BarCodeList[rand]);
-        } catch (JSONException | IOException | InterruptedException e) {
+            thread.join();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
 
-        Picasso.get().load(chosenProduct1.getImage_url()).into((ImageView) findViewById(R.id.top_food)); // récupérer l'image et la loader dans l'image view
-        Picasso.get().load(chosenProduct2.getImage_url()).into((ImageView) findViewById(R.id.bot_food)); // récupérer l'image et la loader dans l'image view
+        while(true) {
+            if(!data.equals(oldData) && !data.equals("")){
+
+                break;
+            }
+        }
 
         rand = (int) Math.floor(Math.random() * Questions.length);
-        setText(Questions[rand],R.layout.game,R.id.question);
+        //get 2nd prod
+        try {
+            newProduct(BarCodeList[rand]);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-
+        TextView question= (TextView) findViewById(R.id.question) ;
+        question.setText(Questions[rand]);
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 loadingDialog.stopLoading();
+                //Picasso.get().load(chosenProduct1.getImage_url()).fit().into((ImageView) findViewById(R.id.top_food));
+                Glide.with(GameActivity.this) //view ou context
+                        .load(chosenProduct1.getImage_url()).centerCrop()
+                        .into((ImageView) findViewById(R.id.top_food)); //id de la Target
+
             }
-        }, 2000);
+        }, 6000);
     }
 
 
@@ -88,23 +123,16 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    private void setText(final String data, final int layout, final int textView) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                setContentView(layout);
-                TextView my_data = (TextView) findViewById(textView);
-                my_data.setText(data);
-            }
-        });
-    }
 
-    public void HTTPRequestGET_Asynchr(String URL) {
+
+
+    public void HTTPRequestGET_Asynchr(String URL) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .get()
                 .url(URL)
                 .build();
+
         client.newCall(request).enqueue(new Callback() {
             private final String TAG = null;
 
@@ -119,26 +147,61 @@ public class GameActivity extends AppCompatActivity {
                     try {
                         final String result = response.body().string();
                         if (!TextUtils.isEmpty(result)) {
-                            GameActivity.data = result;
+                            data = result;
+                            JSONObject jsObj = new JSONObject(data);
+                            jsObj = jsObj.getJSONObject("product");
+                            if (tick%2==0) {
+                                chosenProduct1=importJson(jsObj);
+                                oldData=data;
+                            }
+                            else if(tick%2!=0) {
+                                chosenProduct2=importJson(jsObj);
+                                oldData=data;
+                            }
                         }
+                        tick++;
                     } catch (Exception e) {
                         Log.e(TAG, "Exception = " + e);
                     }
-                }
 
+
+                }
             }
+
         });
     }
 
+    public void newProduct(final String barcode) throws JSONException, IOException, InterruptedException {
+        HTTPRequestGET_Asynchr("https://fr.openfoodfacts.org/api/v0/produit/" + barcode + ".json");
 
+        runOnUiThread(new Runnable() {
+            public void run() {
+                Handler handler=new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject jsObj = new JSONObject(data);
+                            jsObj = jsObj.getJSONObject("product");
+                            if (tick%2==0) {
+                                //Picasso.get().load(chosenProduct1.getImage_url()).fit().into((ImageView) findViewById(R.id.top_food));
+                                Glide.with(GameActivity.this) //view ou context
+                                        .load(chosenProduct1.getImage_url()).centerCrop()
+                                        .into((ImageView) findViewById(R.id.top_food));
+                            }
+                            else if(tick%2!=0) {
+                                //Picasso.get().load(chosenProduct2.getImage_url()).fit().into((ImageView) findViewById(R.id.bot_food));
+                                Glide.with(GameActivity.this).load(chosenProduct2.getImage_url()).centerCrop().into((ImageView) findViewById(R.id.bot_food));
+                            }
 
-    public Product newProduct(final String barcode) throws JSONException, IOException, InterruptedException {
-        HTTPRequestGET_Asynchr("https://fr.openfoodfacts.org/api/v0/produit/"+barcode+".json");
-        JSONObject jsObj = new JSONObject(data);
-        jsObj=jsObj.getJSONObject("product");
-        Product product = importJson(jsObj);
-        oldData=data;
-        return product;
+                        }
+                        catch (JSONException ignored) {
+
+                        }
+                    }
+                }, 4000);
+            }
+        });
     }
 
     public ArrayList<String> importArrayList(JSONObject json_object, String cat_name) throws JSONException {
