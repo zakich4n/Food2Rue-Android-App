@@ -165,91 +165,91 @@ public class Product {
     }
 
     public static class Nutriments{
-        public double carbohydrates;
-        public double carbohydrates_100g;
-        public double carbohydrates_serving;
+        public Double carbohydrates;
+        public Double carbohydrates_100g;
+        public Double carbohydrates_serving;
         public String carbohydrates_unit;
-        public double carbohydrates_value;
+        public Double carbohydrates_value;
         @JsonProperty("carbon-footprint-from-known-ingredients_product")
-        public int carbonFootprintFromKnownIngredientsProduct;
+        public Integer carbonFootprintFromKnownIngredientsProduct;
         @JsonProperty("carbon-footprint-from-known-ingredients_serving")
-        public double carbonFootprintFromKnownIngredientsServing;
-        public int energy;
+        public Double carbonFootprintFromKnownIngredientsServing;
+        public Integer energy;
         @JsonProperty("energy-kcal")
-        public int energyKcal;
+        public Integer energyKcal;
         @JsonProperty("energy-kcal_100g")
-        public int energyKcal100g;
+        public Integer energyKcal100g;
         @JsonProperty("energy-kcal_serving")
-        public double energyKcalServing;
+        public Double energyKcalServing;
         @JsonProperty("energy-kcal_unit")
         public String energyKcalUnit;
         @JsonProperty("energy-kcal_value")
-        public int energyKcalValue;
+        public Integer energyKcalValue;
         @JsonProperty("energy-kj")
-        public int energyKj;
+        public Integer energyKj;
         @JsonProperty("energy-kj_100g")
-        public int energyKj100g;
+        public Integer energyKj100g;
         @JsonProperty("energy-kj_serving")
-        public int energyKjServing;
+        public Integer energyKjServing;
         @JsonProperty("energy-kj_unit")
         public String energyKjUnit;
         @JsonProperty("energy-kj_value")
-        public int energyKjValue;
-        public int energy_100g;
-        public int energy_serving;
+        public Integer energyKjValue;
+        public Integer energy_100g;
+        public Integer energy_serving;
         public String energy_unit;
-        public int energy_value;
-        public double fat;
-        public double fat_100g;
-        public double fat_serving;
+        public Integer energy_value;
+        public Double fat;
+        public Double fat_100g;
+        public Double fat_serving;
         public String fat_unit;
-        public double fat_value;
+        public Double fat_value;
         @JsonProperty("fruits-vegetables-nuts-estimate-from-ingredients_100g")
-        public int fruitsVegetablesNutsEstimateFromIngredients100g;
+        public Integer fruitsVegetablesNutsEstimateFromIngredients100g;
         @JsonProperty("fruits-vegetables-nuts-estimate-from-ingredients_serving")
-        public int fruitsVegetablesNutsEstimateFromIngredientsServing;
+        public Integer fruitsVegetablesNutsEstimateFromIngredientsServing;
         @JsonProperty("nova-group")
-        public int novaGroup;
+        public Integer novaGroup;
         @JsonProperty("nova-group_100g")
-        public int novaGroup100g;
+        public Integer novaGroup100g;
         @JsonProperty("nova-group_serving")
-        public int novaGroupServing;
+        public Integer novaGroupServing;
         @JsonProperty("nutrition-score-fr")
-        public int nutritionScoreFr;
+        public Integer nutritionScoreFr;
         @JsonProperty("nutrition-score-fr_100g")
-        public int nutritionScoreFr100g;
-        public double proteins;
-        public double proteins_100g;
-        public double proteins_serving;
+        public Integer nutritionScoreFr100g;
+        public Double proteins;
+        public Double proteins_100g;
+        public Double proteins_serving;
         public String proteins_unit;
-        public double proteins_value;
-        public double salt;
-        public double salt_100g;
-        public double salt_serving;
+        public Double proteins_value;
+        public Double salt;
+        public Double salt_100g;
+        public Double salt_serving;
         public String salt_unit;
-        public double salt_value;
+        public Double salt_value;
         @JsonProperty("saturated-fat")
-        public double saturatedFat;
+        public Double saturatedFat;
         @JsonProperty("saturated-fat_100g")
-        public double saturatedFat100g;
+        public Double saturatedFat100g;
         @JsonProperty("saturated-fat_serving")
-        public double saturatedFatServing;
+        public Double saturatedFatServing;
         @JsonProperty("saturated-fat_unit")
         public String saturatedFatUnit;
         @JsonProperty("saturated-fat_value")
-        public double saturatedFatValue;
-        public double sodium;
-        public double sodium_100g;
-        public double sodium_serving;
+        public Double saturatedFatValue;
+        public Double sodium;
+        public Double sodium_100g;
+        public Double sodium_serving;
         public String sodium_unit;
-        public double sodium_value;
-        public double sugars;
-        public double sugars_100g;
-        public double sugars_serving;
+        public Double sodium_value;
+        public Double sugars;
+        public Double sugars_100g;
+        public Double sugars_serving;
         public String sugars_unit;
-        public double sugars_value;
+        public Double sugars_value;
 
-        public Nutriments(double carbohydrates, double carbohydrates_100g, double carbohydrates_serving, String carbohydrates_unit, double carbohydrates_value, int carbonFootprintFromKnownIngredientsProduct, double carbonFootprintFromKnownIngredientsServing, int energy, int energyKcal, int energyKcal100g, double energyKcalServing, String energyKcalUnit, int energyKcalValue, int energyKj, int energyKj100g, int energyKjServing, String energyKjUnit, int energyKjValue, int energy_100g, int energy_serving, String energy_unit, int energy_value, double fat, double fat_100g, double fat_serving, String fat_unit, double fat_value, int fruitsVegetablesNutsEstimateFromIngredients100g, int fruitsVegetablesNutsEstimateFromIngredientsServing, int novaGroup, int novaGroup100g, int novaGroupServing, int nutritionScoreFr, int nutritionScoreFr100g, double proteins, double proteins_100g, double proteins_serving, String proteins_unit, double proteins_value, double salt, double salt_100g, double salt_serving, String salt_unit, double salt_value, double saturatedFat, double saturatedFat100g, double saturatedFatServing, String saturatedFatUnit, double saturatedFatValue, double sodium, double sodium_100g, double sodium_serving, String sodium_unit, double sodium_value, double sugars, double sugars_100g, double sugars_serving, String sugars_unit, double sugars_value) {
+        public Nutriments(Double carbohydrates, Double carbohydrates_100g, Double carbohydrates_serving, String carbohydrates_unit, Double carbohydrates_value, Integer carbonFootprintFromKnownIngredientsProduct, Double carbonFootprintFromKnownIngredientsServing, Integer energy, Integer energyKcal, Integer energyKcal100g, Double energyKcalServing, String energyKcalUnit, Integer energyKcalValue, Integer energyKj, Integer energyKj100g, Integer energyKjServing, String energyKjUnit, Integer energyKjValue, Integer energy_100g, Integer energy_serving, String energy_unit, Integer energy_value, Double fat, Double fat_100g, Double fat_serving, String fat_unit, Double fat_value, Integer fruitsVegetablesNutsEstimateFromIngredients100g, Integer fruitsVegetablesNutsEstimateFromIngredientsServing, Integer novaGroup, Integer novaGroup100g, Integer novaGroupServing, Integer nutritionScoreFr, Integer nutritionScoreFr100g, Double proteins, Double proteins_100g, Double proteins_serving, String proteins_unit, Double proteins_value, Double salt, Double salt_100g, Double salt_serving, String salt_unit, Double salt_value, Double saturatedFat, Double saturatedFat100g, Double saturatedFatServing, String saturatedFatUnit, Double saturatedFatValue, Double sodium, Double sodium_100g, Double sodium_serving, String sodium_unit, Double sodium_value, Double sugars, Double sugars_100g, Double sugars_serving, String sugars_unit, Double sugars_value) {
             this.carbohydrates = carbohydrates;
             this.carbohydrates_100g = carbohydrates_100g;
             this.carbohydrates_serving = carbohydrates_serving;
@@ -311,27 +311,27 @@ public class Product {
             this.sugars_value = sugars_value;
         }
 
-        public double getCarbohydrates() {
+        public Double getCarbohydrates() {
             return carbohydrates;
         }
 
-        public void setCarbohydrates(double carbohydrates) {
+        public void setCarbohydrates(Double carbohydrates) {
             this.carbohydrates = carbohydrates;
         }
 
-        public double getCarbohydrates_100g() {
+        public Double getCarbohydrates_100g() {
             return carbohydrates_100g;
         }
 
-        public void setCarbohydrates_100g(double carbohydrates_100g) {
+        public void setCarbohydrates_100g(Double carbohydrates_100g) {
             this.carbohydrates_100g = carbohydrates_100g;
         }
 
-        public double getCarbohydrates_serving() {
+        public Double getCarbohydrates_serving() {
             return carbohydrates_serving;
         }
 
-        public void setCarbohydrates_serving(double carbohydrates_serving) {
+        public void setCarbohydrates_serving(Double carbohydrates_serving) {
             this.carbohydrates_serving = carbohydrates_serving;
         }
 
@@ -343,59 +343,59 @@ public class Product {
             this.carbohydrates_unit = carbohydrates_unit;
         }
 
-        public double getCarbohydrates_value() {
+        public Double getCarbohydrates_value() {
             return carbohydrates_value;
         }
 
-        public void setCarbohydrates_value(double carbohydrates_value) {
+        public void setCarbohydrates_value(Double carbohydrates_value) {
             this.carbohydrates_value = carbohydrates_value;
         }
 
-        public int getCarbonFootprintFromKnownIngredientsProduct() {
+        public Integer getCarbonFootprintFromKnownIngredientsProduct() {
             return carbonFootprintFromKnownIngredientsProduct;
         }
 
-        public void setCarbonFootprintFromKnownIngredientsProduct(int carbonFootprintFromKnownIngredientsProduct) {
+        public void setCarbonFootprintFromKnownIngredientsProduct(Integer carbonFootprintFromKnownIngredientsProduct) {
             this.carbonFootprintFromKnownIngredientsProduct = carbonFootprintFromKnownIngredientsProduct;
         }
 
-        public double getCarbonFootprintFromKnownIngredientsServing() {
+        public Double getCarbonFootprintFromKnownIngredientsServing() {
             return carbonFootprintFromKnownIngredientsServing;
         }
 
-        public void setCarbonFootprintFromKnownIngredientsServing(double carbonFootprintFromKnownIngredientsServing) {
+        public void setCarbonFootprintFromKnownIngredientsServing(Double carbonFootprintFromKnownIngredientsServing) {
             this.carbonFootprintFromKnownIngredientsServing = carbonFootprintFromKnownIngredientsServing;
         }
 
-        public int getEnergy() {
+        public Integer getEnergy() {
             return energy;
         }
 
-        public void setEnergy(int energy) {
+        public void setEnergy(Integer energy) {
             this.energy = energy;
         }
 
-        public int getEnergyKcal() {
+        public Integer getEnergyKcal() {
             return energyKcal;
         }
 
-        public void setEnergyKcal(int energyKcal) {
+        public void setEnergyKcal(Integer energyKcal) {
             this.energyKcal = energyKcal;
         }
 
-        public int getEnergyKcal100g() {
+        public Integer getEnergyKcal100g() {
             return energyKcal100g;
         }
 
-        public void setEnergyKcal100g(int energyKcal100g) {
+        public void setEnergyKcal100g(Integer energyKcal100g) {
             this.energyKcal100g = energyKcal100g;
         }
 
-        public double getEnergyKcalServing() {
+        public Double getEnergyKcalServing() {
             return energyKcalServing;
         }
 
-        public void setEnergyKcalServing(double energyKcalServing) {
+        public void setEnergyKcalServing(Double energyKcalServing) {
             this.energyKcalServing = energyKcalServing;
         }
 
@@ -407,35 +407,35 @@ public class Product {
             this.energyKcalUnit = energyKcalUnit;
         }
 
-        public int getEnergyKcalValue() {
+        public Integer getEnergyKcalValue() {
             return energyKcalValue;
         }
 
-        public void setEnergyKcalValue(int energyKcalValue) {
+        public void setEnergyKcalValue(Integer energyKcalValue) {
             this.energyKcalValue = energyKcalValue;
         }
 
-        public int getEnergyKj() {
+        public Integer getEnergyKj() {
             return energyKj;
         }
 
-        public void setEnergyKj(int energyKj) {
+        public void setEnergyKj(Integer energyKj) {
             this.energyKj = energyKj;
         }
 
-        public int getEnergyKj100g() {
+        public Integer getEnergyKj100g() {
             return energyKj100g;
         }
 
-        public void setEnergyKj100g(int energyKj100g) {
+        public void setEnergyKj100g(Integer energyKj100g) {
             this.energyKj100g = energyKj100g;
         }
 
-        public int getEnergyKjServing() {
+        public Integer getEnergyKjServing() {
             return energyKjServing;
         }
 
-        public void setEnergyKjServing(int energyKjServing) {
+        public void setEnergyKjServing(Integer energyKjServing) {
             this.energyKjServing = energyKjServing;
         }
 
@@ -447,27 +447,27 @@ public class Product {
             this.energyKjUnit = energyKjUnit;
         }
 
-        public int getEnergyKjValue() {
+        public Integer getEnergyKjValue() {
             return energyKjValue;
         }
 
-        public void setEnergyKjValue(int energyKjValue) {
+        public void setEnergyKjValue(Integer energyKjValue) {
             this.energyKjValue = energyKjValue;
         }
 
-        public int getEnergy_100g() {
+        public Integer getEnergy_100g() {
             return energy_100g;
         }
 
-        public void setEnergy_100g(int energy_100g) {
+        public void setEnergy_100g(Integer energy_100g) {
             this.energy_100g = energy_100g;
         }
 
-        public int getEnergy_serving() {
+        public Integer getEnergy_serving() {
             return energy_serving;
         }
 
-        public void setEnergy_serving(int energy_serving) {
+        public void setEnergy_serving(Integer energy_serving) {
             this.energy_serving = energy_serving;
         }
 
@@ -479,35 +479,35 @@ public class Product {
             this.energy_unit = energy_unit;
         }
 
-        public int getEnergy_value() {
+        public Integer getEnergy_value() {
             return energy_value;
         }
 
-        public void setEnergy_value(int energy_value) {
+        public void setEnergy_value(Integer energy_value) {
             this.energy_value = energy_value;
         }
 
-        public double getFat() {
+        public Double getFat() {
             return fat;
         }
 
-        public void setFat(double fat) {
+        public void setFat(Double fat) {
             this.fat = fat;
         }
 
-        public double getFat_100g() {
+        public Double getFat_100g() {
             return fat_100g;
         }
 
-        public void setFat_100g(double fat_100g) {
+        public void setFat_100g(Double fat_100g) {
             this.fat_100g = fat_100g;
         }
 
-        public double getFat_serving() {
+        public Double getFat_serving() {
             return fat_serving;
         }
 
-        public void setFat_serving(double fat_serving) {
+        public void setFat_serving(Double fat_serving) {
             this.fat_serving = fat_serving;
         }
 
@@ -519,91 +519,91 @@ public class Product {
             this.fat_unit = fat_unit;
         }
 
-        public double getFat_value() {
+        public Double getFat_value() {
             return fat_value;
         }
 
-        public void setFat_value(double fat_value) {
+        public void setFat_value(Double fat_value) {
             this.fat_value = fat_value;
         }
 
-        public int getFruitsVegetablesNutsEstimateFromIngredients100g() {
+        public Integer getFruitsVegetablesNutsEstimateFromIngredients100g() {
             return fruitsVegetablesNutsEstimateFromIngredients100g;
         }
 
-        public void setFruitsVegetablesNutsEstimateFromIngredients100g(int fruitsVegetablesNutsEstimateFromIngredients100g) {
+        public void setFruitsVegetablesNutsEstimateFromIngredients100g(Integer fruitsVegetablesNutsEstimateFromIngredients100g) {
             this.fruitsVegetablesNutsEstimateFromIngredients100g = fruitsVegetablesNutsEstimateFromIngredients100g;
         }
 
-        public int getFruitsVegetablesNutsEstimateFromIngredientsServing() {
+        public Integer getFruitsVegetablesNutsEstimateFromIngredientsServing() {
             return fruitsVegetablesNutsEstimateFromIngredientsServing;
         }
 
-        public void setFruitsVegetablesNutsEstimateFromIngredientsServing(int fruitsVegetablesNutsEstimateFromIngredientsServing) {
+        public void setFruitsVegetablesNutsEstimateFromIngredientsServing(Integer fruitsVegetablesNutsEstimateFromIngredientsServing) {
             this.fruitsVegetablesNutsEstimateFromIngredientsServing = fruitsVegetablesNutsEstimateFromIngredientsServing;
         }
 
-        public int getNovaGroup() {
+        public Integer getNovaGroup() {
             return novaGroup;
         }
 
-        public void setNovaGroup(int novaGroup) {
+        public void setNovaGroup(Integer novaGroup) {
             this.novaGroup = novaGroup;
         }
 
-        public int getNovaGroup100g() {
+        public Integer getNovaGroup100g() {
             return novaGroup100g;
         }
 
-        public void setNovaGroup100g(int novaGroup100g) {
+        public void setNovaGroup100g(Integer novaGroup100g) {
             this.novaGroup100g = novaGroup100g;
         }
 
-        public int getNovaGroupServing() {
+        public Integer getNovaGroupServing() {
             return novaGroupServing;
         }
 
-        public void setNovaGroupServing(int novaGroupServing) {
+        public void setNovaGroupServing(Integer novaGroupServing) {
             this.novaGroupServing = novaGroupServing;
         }
 
-        public int getNutritionScoreFr() {
+        public Integer getNutritionScoreFr() {
             return nutritionScoreFr;
         }
 
-        public void setNutritionScoreFr(int nutritionScoreFr) {
+        public void setNutritionScoreFr(Integer nutritionScoreFr) {
             this.nutritionScoreFr = nutritionScoreFr;
         }
 
-        public int getNutritionScoreFr100g() {
+        public Integer getNutritionScoreFr100g() {
             return nutritionScoreFr100g;
         }
 
-        public void setNutritionScoreFr100g(int nutritionScoreFr100g) {
+        public void setNutritionScoreFr100g(Integer nutritionScoreFr100g) {
             this.nutritionScoreFr100g = nutritionScoreFr100g;
         }
 
-        public double getProteins() {
+        public Double getProteins() {
             return proteins;
         }
 
-        public void setProteins(double proteins) {
+        public void setProteins(Double proteins) {
             this.proteins = proteins;
         }
 
-        public double getProteins_100g() {
+        public Double getProteins_100g() {
             return proteins_100g;
         }
 
-        public void setProteins_100g(double proteins_100g) {
+        public void setProteins_100g(Double proteins_100g) {
             this.proteins_100g = proteins_100g;
         }
 
-        public double getProteins_serving() {
+        public Double getProteins_serving() {
             return proteins_serving;
         }
 
-        public void setProteins_serving(double proteins_serving) {
+        public void setProteins_serving(Double proteins_serving) {
             this.proteins_serving = proteins_serving;
         }
 
@@ -615,35 +615,35 @@ public class Product {
             this.proteins_unit = proteins_unit;
         }
 
-        public double getProteins_value() {
+        public Double getProteins_value() {
             return proteins_value;
         }
 
-        public void setProteins_value(double proteins_value) {
+        public void setProteins_value(Double proteins_value) {
             this.proteins_value = proteins_value;
         }
 
-        public double getSalt() {
+        public Double getSalt() {
             return salt;
         }
 
-        public void setSalt(double salt) {
+        public void setSalt(Double salt) {
             this.salt = salt;
         }
 
-        public double getSalt_100g() {
+        public Double getSalt_100g() {
             return salt_100g;
         }
 
-        public void setSalt_100g(double salt_100g) {
+        public void setSalt_100g(Double salt_100g) {
             this.salt_100g = salt_100g;
         }
 
-        public double getSalt_serving() {
+        public Double getSalt_serving() {
             return salt_serving;
         }
 
-        public void setSalt_serving(double salt_serving) {
+        public void setSalt_serving(Double salt_serving) {
             this.salt_serving = salt_serving;
         }
 
@@ -655,35 +655,35 @@ public class Product {
             this.salt_unit = salt_unit;
         }
 
-        public double getSalt_value() {
+        public Double getSalt_value() {
             return salt_value;
         }
 
-        public void setSalt_value(double salt_value) {
+        public void setSalt_value(Double salt_value) {
             this.salt_value = salt_value;
         }
 
-        public double getSaturatedFat() {
+        public Double getSaturatedFat() {
             return saturatedFat;
         }
 
-        public void setSaturatedFat(double saturatedFat) {
+        public void setSaturatedFat(Double saturatedFat) {
             this.saturatedFat = saturatedFat;
         }
 
-        public double getSaturatedFat100g() {
+        public Double getSaturatedFat100g() {
             return saturatedFat100g;
         }
 
-        public void setSaturatedFat100g(double saturatedFat100g) {
+        public void setSaturatedFat100g(Double saturatedFat100g) {
             this.saturatedFat100g = saturatedFat100g;
         }
 
-        public double getSaturatedFatServing() {
+        public Double getSaturatedFatServing() {
             return saturatedFatServing;
         }
 
-        public void setSaturatedFatServing(double saturatedFatServing) {
+        public void setSaturatedFatServing(Double saturatedFatServing) {
             this.saturatedFatServing = saturatedFatServing;
         }
 
@@ -695,35 +695,35 @@ public class Product {
             this.saturatedFatUnit = saturatedFatUnit;
         }
 
-        public double getSaturatedFatValue() {
+        public Double getSaturatedFatValue() {
             return saturatedFatValue;
         }
 
-        public void setSaturatedFatValue(double saturatedFatValue) {
+        public void setSaturatedFatValue(Double saturatedFatValue) {
             this.saturatedFatValue = saturatedFatValue;
         }
 
-        public double getSodium() {
+        public Double getSodium() {
             return sodium;
         }
 
-        public void setSodium(double sodium) {
+        public void setSodium(Double sodium) {
             this.sodium = sodium;
         }
 
-        public double getSodium_100g() {
+        public Double getSodium_100g() {
             return sodium_100g;
         }
 
-        public void setSodium_100g(double sodium_100g) {
+        public void setSodium_100g(Double sodium_100g) {
             this.sodium_100g = sodium_100g;
         }
 
-        public double getSodium_serving() {
+        public Double getSodium_serving() {
             return sodium_serving;
         }
 
-        public void setSodium_serving(double sodium_serving) {
+        public void setSodium_serving(Double sodium_serving) {
             this.sodium_serving = sodium_serving;
         }
 
@@ -735,35 +735,35 @@ public class Product {
             this.sodium_unit = sodium_unit;
         }
 
-        public double getSodium_value() {
+        public Double getSodium_value() {
             return sodium_value;
         }
 
-        public void setSodium_value(double sodium_value) {
+        public void setSodium_value(Double sodium_value) {
             this.sodium_value = sodium_value;
         }
 
-        public double getSugars() {
+        public Double getSugars() {
             return sugars;
         }
 
-        public void setSugars(double sugars) {
+        public void setSugars(Double sugars) {
             this.sugars = sugars;
         }
 
-        public double getSugars_100g() {
+        public Double getSugars_100g() {
             return sugars_100g;
         }
 
-        public void setSugars_100g(double sugars_100g) {
+        public void setSugars_100g(Double sugars_100g) {
             this.sugars_100g = sugars_100g;
         }
 
-        public double getSugars_serving() {
+        public Double getSugars_serving() {
             return sugars_serving;
         }
 
-        public void setSugars_serving(double sugars_serving) {
+        public void setSugars_serving(Double sugars_serving) {
             this.sugars_serving = sugars_serving;
         }
 
@@ -775,11 +775,11 @@ public class Product {
             this.sugars_unit = sugars_unit;
         }
 
-        public double getSugars_value() {
+        public Double getSugars_value() {
             return sugars_value;
         }
 
-        public void setSugars_value(double sugars_value) {
+        public void setSugars_value(Double sugars_value) {
             this.sugars_value = sugars_value;
         }
     }
