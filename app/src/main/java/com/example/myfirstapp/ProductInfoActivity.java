@@ -34,6 +34,20 @@ public class ProductInfoActivity extends AppCompatActivity {
     public TextView product_allergens;
     public TextView ingredients;
     public ImageView product_image;
+    public TextView product_energy_as_sold_for_100;
+    public TextView product_energy_as_sold_per_serving;
+    public TextView product_fat_as_sold_for_100;
+    public TextView product_fat_as_as_sold_per_serving;
+    public TextView product_saturated_fat_as_sold_for_100;
+    public TextView product_saturated_fat_as_sold_per_serving;
+    public TextView product_protein_as_sold_for_100;
+    public TextView product_protein_as_sold_per_serving;
+    public TextView product_salt_as_sold_for_100;
+    public TextView product_salt_as_sold_per_serving;
+    public TextView product_carbohydrates_as_sold_for_100;
+    public TextView product_carbohydrates_as_sold_per_serving;
+
+
 
     public Product prod;
 
@@ -55,6 +69,20 @@ public class ProductInfoActivity extends AppCompatActivity {
         product_allergens = findViewById(R.id.product_allergens);
         ingredients = findViewById(R.id.product_ingredients);
         product_image = findViewById(R.id.product_image);
+        product_energy_as_sold_for_100 = findViewById(R.id.energy_as_sold_for_100);
+        product_energy_as_sold_per_serving = findViewById(R.id.energy_as_sold_per_serving);
+        product_fat_as_sold_for_100 = findViewById(R.id.fat_as_sold_for_100);
+        product_fat_as_as_sold_per_serving = findViewById(R.id.fat_as_sold_per_serving);
+        product_saturated_fat_as_sold_for_100 = findViewById(R.id.saturated_fat_as_sold_for_100);
+        product_saturated_fat_as_sold_per_serving = findViewById(R.id.saturated_fat_as_sold_per_serving);
+        product_protein_as_sold_for_100 = findViewById(R.id.protein_as_sold_for_100);
+        product_protein_as_sold_per_serving = findViewById(R.id.protein_as_sold_per_serving);
+        product_salt_as_sold_for_100 = findViewById(R.id.salt_as_sold_for_100);
+        product_salt_as_sold_per_serving = findViewById(R.id.salt_as_sold_per_serving);
+        product_carbohydrates_as_sold_for_100 = findViewById(R.id.carbohydrates_as_sold_for_100);
+        product_carbohydrates_as_sold_per_serving = findViewById(R.id.carbohydrates_as_sold_per_serving);
+
+
 
         String url = "https://world.openfoodfacts.org/api/v2/product/" + barcodeData + ".json";
 
@@ -80,6 +108,18 @@ public class ProductInfoActivity extends AppCompatActivity {
                 product_traces.setText(product.getTrace());
                 product_allergens.setText(product.getAllergens());
                 ingredients.setText(product.getIngredients_text());
+                product_energy_as_sold_for_100.setText(product.nutriments.getEnergyKcal100g());
+                product_energy_as_sold_per_serving.setText(product.nutriments.getEnergy_serving());
+                product_fat_as_sold_for_100.setText((int) product.nutriments.getFat_100g());
+                product_fat_as_as_sold_per_serving.setText((int) product.nutriments.getFat_serving());
+                product_saturated_fat_as_sold_for_100.setText((int) product.nutriments.getSaturatedFat100g());
+                product_saturated_fat_as_sold_per_serving.setText((int) product.nutriments.getSaturatedFatServing());
+                product_protein_as_sold_for_100.setText((int) product.nutriments.getProteins_100g());
+                product_protein_as_sold_per_serving.setText((int) product.nutriments.getProteins_serving());
+                product_salt_as_sold_for_100.setText((int) product.nutriments.getSalt_100g());
+                product_salt_as_sold_per_serving.setText((int) product.nutriments.getSalt_serving());
+                product_carbohydrates_as_sold_for_100.setText((int) product.nutriments.getCarbohydrates_100g());
+                product_carbohydrates_as_sold_per_serving.setText((int) product.nutriments.getCarbohydrates_serving());
                 Picasso.get().load(product.getImage_url()).fit().into(product_image);
             }
         });

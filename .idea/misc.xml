@@ -4,26 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/food_barcode.xml" value="0.1195" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/gradient.xml" value="0.1" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/ic_upc_scan.xml" value="0.1" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/main_background.xml" value="0.1" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/new_background.xml" value="0.1" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/round_button.xml" value="0.1195" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/score_line.xml" value="0.1" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/drawable/unit_score.xml" value="0.1" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/font/chocolate.xml" value="0.19010416666666666" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/article_form.xml" value="0.12083333333333333" />
+        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/barcode_scanner.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/game.xml" value="0.1" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/http_activity.xml" value="0.1" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/layout_custom_dialog.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/newtest.xml" value="0.12083333333333333" />
         <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/scoreboard.xml" value="0.1265625" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/scoreboard_line.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/testt.xml" value="0.12083333333333333" />
-        <entry key="..\:/Users/jtbla/Documents/Projet_programmation_mobile/food2rue/app/src/main/res/layout/testtt.xml" value="0.12083333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="app/src/main/res/layout/article_form.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/article_form2.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/barcode_scanner.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/game.xml" value="0.29245283018867924" />
+        <entry key="app/src/main/res/layout/layout_custom_dialog.xml" value="0.22644927536231885" />
+        <entry key="app/src/main/res/layout/loading_dialog.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/loading_screen.xml" value="0.21145833333333333" />
+        <entry key="app/src/main/res/layout/paul.xml" value="0.21145833333333333" />
+        <entry key="app/src/main/res/layout/scoreboard.xml" value="0.23020833333333332" />
       </map>
     </option>
   </component>
